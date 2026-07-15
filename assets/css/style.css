@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #ED563B;
+}
+
+.container {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: 900;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.logo span {
+    color: var(--color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.parent-list {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.list-anchor {
+    text-decoration: none;
+    padding: 0 18px;
+    color: white;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    transition: all .3s ease;
+}
+
+
+.list-anchor:hover {
+    color: var(--color);
+}
+
+.common-btn {
+    text-decoration: none;
+    margin-left: 25px;
+    background-color: var(--color);
+    color: white;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+.common-btn:hover {
+    background-color: #ed563bc6;
+
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.128);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.263);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 45%;
+    left: calc(50% - 50%);
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.content-heading {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.gym-heading {
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 25px;
+}
+
+.gym-heading span {
+    color: var(--color);
+}
+
+/*  */
+.menu-btn {
+    display: none;
+}
+
+
+@media (max-width: 992px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .list-anchor {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .common-btn {
+        display: none;
+    }
+
+    .list-anchor {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .parent-list {
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        background: #222;
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height .4s ease;
+    }
+
+    .parent-list.active {
+
+        max-height: 320px;
+
+
+    }
+
+    .list-anchor {
+        display: block;
+        color: white;
+        margin-bottom: 10px;
+
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .content-heading {
+        font-size: 20px;
+    }
+
+    .gym-heading {
+        font-size: 55px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .gym-heading {
+        font-size: 40px;
+        font-weight: 700;
+
+    }
+
+    .content-heading {
+        font-size: 18px;
+    }
+}
+
+.hero-btn {
+    padding: 10px;
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #ed563bc6;
+
+}
