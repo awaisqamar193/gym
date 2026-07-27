@@ -346,3 +346,64 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.third-section {
+     height: 350px;
+
+}
+
+.background-image {
+    background-image: url(../images/images.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    color: white;
+
+}
+
+.second-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+
+.begin-think {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "Inter", sans-serif;
+
+}
+
+.begin-think span {
+    color: var(--color);
+}
+
+.dummy-para {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    line-height: 24px;
+    margin: 15px 0;
+
+}
+
+@media (max-width: 576px) {
+    .begin-think {
+        font-size: 28px;
+    }
+
+    .dummy-para {
+        font-size: 16px;
+    }
+
+}
