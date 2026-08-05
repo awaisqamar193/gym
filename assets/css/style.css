@@ -348,7 +348,7 @@ header {
 }
 
 .third-section {
-     height: 350px;
+    height: 350px;
 
 }
 
@@ -405,5 +405,120 @@ header {
     .dummy-para {
         font-size: 16px;
     }
+
+}
+
+.fourth-section {
+    padding: 80px 0;
+}
+
+.parent-classes-btn {
+    display: flex;
+    gap: 50px;
+}
+
+.left-control {
+    width: 30%;
+    height: 100%;
+}
+
+.right-cards {
+    width: 70%;
+    height: 100%;
+}
+
+.training-img {
+    width: 100%;
+    max-height: 270px !important;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 10px 1px #00000021;
+    padding: 20px 30px;
+    margin-bottom: 25px;
+}
+
+.class-heading {
+    font-family: "Inter", sans-serif;
+    margin: 20px 0;
+
+}
+
+.class-para {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: gray;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.tabs span {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .tabs span {
+        font-size: 17px;
+        padding: 0;
+    }
+    
+ 
+}
+
+.Schedule-btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--color);
+    font-family: "Inter", sans-serif;
+    padding: 10px 20px;
+    transition: all .3s ease;
+}
+.Schedule-btn:hover {
+    background-color: #ed563bea;
+}
+
+.tabs.sec-active {
+    color: var(--color) !important;
+}
+
+.all-schedule {
+    color: white;
+    background-color: var(--color);
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    padding: 20px;
+    transition: all .3s ease;
+}
+.all-schedule:hover {
+    background-color: #ed563bea;
+}
+
+@media (max-width: 768px) {
+    .parent-classes-btn {
+        flex-direction: column;
+
+    }
+
+    .tabs {
+        display: flex;
+    }
+
+    .left-control {
+        width: 100%;
+
+    }
+
+    .right-cards {
+        width: 100%;
+    }
+
 
 }
