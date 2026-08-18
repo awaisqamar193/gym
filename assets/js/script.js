@@ -41,7 +41,7 @@ const classes = [
 ]
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-        tabs.forEach((tab) => {  
+        tabs.forEach((tab) => {
             tab.classList.remove("sec-active")
         })
         const index = tab.dataset.id;
@@ -56,4 +56,225 @@ tabs.forEach((tab) => {
 
 
 })
+const days = document.querySelectorAll(".day");
+const scheduleTable = document.querySelector("#scheduleTable");
+const schedules = {
+    monday: [
+        {
+            className: "Fitness Class",
+            time: "10:00AM - 11:30AM",
+            sectime: "",
+            trainer: "William G. Stewart"
+        },
+        {
+            className: "Muscle Training",
+            time: "",
+            sectime: "",
+            trainer: "Paul D. Newman"
+        },
+        {
+            className: "Body Building",
+            time: "",
+            sectime: "2:00PM - 3:30PM",
+            trainer: "Boyd C. Harris"
+        },
+        {
+            className: "Yoga Training Class",
+            time: "",
+            sectime: "",
+            trainer: "Hector T. Daigle"
+        },
+        {
+            className: "Advanced Training",
+            time: "",
+            sectime: "",
+            trainer: "Bret D. Bowers"
+        },
+    ],
+
+    tuesday: [
+        {
+            className: "Fitness Class",
+            time: "",
+            sectime: "2:00PM - 3:30PM",
+            trainer: "William G. Stewart"
+        },
+        {
+            className: "Muscle Training",
+            time: "",
+            sectime: "",
+            trainer: "Paul D. Newman"
+        },
+        {
+            className: "Body Building",
+            time: "10:00AM - 11:30AM",
+            sectime: "",
+            trainer: "Boyd C. Harris"
+        },
+        {
+            className: "Yoga Training Class",
+            time: "",
+            sectime: "",
+            trainer: "Hector T. Daigle"
+        },
+        {
+            className: "Advanced Training",
+            time: "",
+            sectime: "",
+            trainer: "Bret D. Bowers"
+        },
+    ],
+    wednesday: [
+        {
+            className: "Fitness Class",
+            time: "",
+            sectime: "",
+            trainer: "William G. Stewart"
+        },
+        {
+            className: "Muscle Training",
+            time: "",
+            sectime: "",
+            trainer: "Paul D. Newman"
+        },
+        {
+            className: "Body Building",
+            time: "",
+            sectime: "",
+            trainer: "Boyd C. Harris"
+        },
+        {
+            className: "Yoga Training Class",
+            time: "10:00AM - 11:30AM",
+            sectime: "",
+            trainer: "Hector T. Daigle"
+        },
+        {
+            className: "Advanced Training",
+            time: "",
+            sectime: "2:00PM - 3:30PM",
+            trainer: "Bret D. Bowers"
+        },
+    ],
+    thursday: [
+        {
+            className: "Fitness Class",
+            time: "",
+            sectime: "",
+            trainer: "William G. Stewart"
+        },
+        {
+            className: "Muscle Training",
+            time: "",
+            sectime: "2:00PM - 3:30PM",
+            trainer: "Paul D. Newman"
+        },
+        {
+            className: "Body Building",
+            time: "",
+            sectime: "",
+            trainer: "Boyd C. Harris"
+        },
+        {
+            className: "Yoga Training Class",
+            time: "",
+            sectime: "",
+            trainer: "Hector T. Daigle"
+        },
+        {
+            className: "Advanced Training",
+            time: "10:00AM - 11:30AM",
+            sectime: "",
+            trainer: "Bret D. Bowers"
+        },
+    ],
+    friday: [
+        {
+            className: "Fitness Class",
+            time: "",
+            sectime: "",
+            trainer: "William G. Stewart"
+        },
+        {
+            className: "Muscle Training",
+            time: "10:00AM - 11:30AM",
+            sectime: "",
+            trainer: "Paul D. Newman"
+        },
+        {
+            className: "Body Building",
+            time: "",
+            sectime: "",
+            trainer: "Boyd C. Harris"
+        },
+        {
+            className: "Yoga Training Class",
+            time: "",
+            sectime: "2:00PM - 3:30PM",
+            trainer: "Hector T. Daigle"
+        },
+        {
+            className: "Advanced Training",
+            time: "",
+            sectime: "",
+            trainer: "Bret D. Bowers"
+        },
+    ]
+};
+
+days.forEach((day) => {
+    day.addEventListener("click", () => {
+        const selectedDay = day.dataset.day;
+        const data = schedules[selectedDay]
+        days.forEach((day) => {
+            day.classList.remove("third-active")
+
+        })
+        scheduleTable.innerHTML = "";
+
+        data.forEach((item) => {
+            scheduleTable.innerHTML += `  
+         <div class="cell">${item.className}</div>
+                 <div class="cell">${item.time}</div>
+                 <div class="cell">${item.sectime}</div>
+                <div class="cell">${item.trainer}</div> `
+            day.classList.add("third-active")
+
+        })
+
+
+
+    })
+
+
+
+
+
+
+})
+
+
+const monday = document.querySelector('[data-day="monday"]');
+
+monday.classList.add("third-active");
+
+showSchedule("monday");
+function showSchedule(selectedDay) {
+
+    const data = schedules[selectedDay];
+
+    scheduleTable.innerHTML = "";
+
+    data.forEach((item) => {
+
+        scheduleTable.innerHTML += `
+            <div class="cell">${item.className}</div>
+            <div class="cell">${item.time}</div>
+            <div class="cell">${item.sectime}</div>
+            <div class="cell">${item.trainer}</div>
+        `;
+
+    });
+}
+
 

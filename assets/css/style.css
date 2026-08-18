@@ -466,8 +466,8 @@ header {
         font-size: 17px;
         padding: 0;
     }
-    
- 
+
+
 }
 
 .Schedule-btn {
@@ -478,6 +478,7 @@ header {
     padding: 10px 20px;
     transition: all .3s ease;
 }
+
 .Schedule-btn:hover {
     background-color: #ed563bea;
 }
@@ -497,6 +498,7 @@ header {
     padding: 20px;
     transition: all .3s ease;
 }
+
 .all-schedule:hover {
     background-color: #ed563bea;
 }
@@ -521,4 +523,89 @@ header {
     }
 
 
+}
+
+.fifth-section {
+    position: relative;
+}
+
+.schedule-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.815)),
+        url("../images/product-detail-banner.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.days {
+    text-align: center;
+}
+
+.day {
+    background: none;
+    color: white;
+    border: 0;
+    margin-right: 10px;
+    margin-bottom: 45px;
+    transition: all .3s ease;
+}
+
+.day:hover {
+    color: var(--color);
+}
+
+.day::after {
+    content: "/";
+    margin-left: 10px;
+}
+
+.schedule-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .schedule-table {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+
+    .cell {
+        min-height: 85px;
+        font-size: 13px !important;
+        font-weight: 400 !important;
+    }
+
+}
+
+.cell {
+    min-height: 100px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.third-active {
+    color: var(--color);
+}
+.classes-para {
+    color: white;
 }
