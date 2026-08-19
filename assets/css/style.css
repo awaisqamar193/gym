@@ -527,12 +527,10 @@ header {
 
 .fifth-section {
     position: relative;
+    padding: 60px 0;
 }
 
 .schedule-img {
-    position: absolute;
-    top: 0;
-    left: 0;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.815)),
         url("../images/product-detail-banner.webp");
@@ -606,6 +604,90 @@ header {
 .third-active {
     color: var(--color);
 }
+
 .classes-para {
     color: white;
+}
+
+.sixth-section {
+    padding: 70px 0;
+}
+
+.trainer-img img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.Training-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: auto;
+}
+.trainer-card:hover {
+    cursor: pointer;
+}
+
+.trainer-card {
+
+    box-shadow: 0px 0px 9px 0px #0000004a;
+    padding: 20px 25px;
+}
+
+.trainer-img {
+    margin-bottom: 20px;
+}
+
+.trainer-name {
+    font-family: "Inter", sans-serif;
+    color: rgb(35, 45, 57);
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .Training-cards {
+
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .trainer-card {
+        width: 45%;
+
+
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .trainer-card {
+        width: 100%;
+        text-align: center;
+      
+    }
+
+}
+
+.trainer-para {
+    font-family: "Inter", sans-serif;
+    line-height: 25px;
+    font-size: 14px;
+    color: gray;
+}
+
+.icon-list {
+    margin-top: 10px;
+}
+
+.icon-list i {
+    margin-right: 7px;
+    transition: all .3s ease;
+}
+
+.icon-list i:hover {
+    color: var(--color);
 }
